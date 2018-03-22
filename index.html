@@ -72,11 +72,13 @@
                     Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
                 }
             };
-
-            $.get('./analysis/highlightedanalysisitem_big.html', function (templates) {
-                var template = $(templates).filter('#highlightedanalysisitem_big').children().html();
+        $.each(templates, function (value) {
+            $.get(value.file, function (templates) {
+                var template = $(templates).filter('#'+value.id).children().html();
                 $('#target').append(Mustache.render(template, dataObj));
             });
+
+        })
 
     </script>
 
