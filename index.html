@@ -35,43 +35,55 @@
 
     <script>
 
+        var templates = [
+            { file: "./analysis/highlightedanalysisitem_big.html", id: "highlightedanalysisitem_big" },
+            { file: "./analysis/highlightedanalysisitem_extrasided.html", id: "highlightedanalysisitem_extrasided" },
+            { file: "./analysis/highlightedanalysisitem_large.html", id: "highlightedanalysisitem_large" },
+            { file: "./analysis/highlightedanalysisitem_medium.html", id: "highlightedanalysisitem_medium" },
+            { file: "./analysis/highlightedanalysisitem_mediumclean.html", id: "highlightedanalysisitem_mediumclean" },
+            { file: "./analysis/highlightedanalysisitem_quote.html", id: "highlightedanalysisitem_quote" },
+            { file: "./analysis/highlightedanalysisitem_seo.html", id: "highlightedanalysisitem_seo" },
+            { file: "./analysis/highlightedanalysisitem_small.html", id: "highlightedanalysisitem_small" },
+            { file: "./analysis/highlightedanalysisitem_smallclean.html", id: "highlightedanalysisitem_smallclean" }
 
-        var dataObj = {
-            Value: {
-                SEO: {
-                    FullUrl: "http:google.com"
-                },
-                Title: "title title title title title title title",
-                Author: {
-                    Url: "http:google.com",
-                    Name: "Author Name",
-                    ImageResponse: {
-                        Url_Nano: "https://picsum.photos/600/600"
+        ]
+
+            var dataObj = {
+                Value: {
+                    SEO: {
+                        FullUrl: "http:google.com"
                     },
-                    Position: "Author position"
-                },
-                Company: {
-                    Url: "http:google.com",
-                    Name: "Company name"
-                },
-                Image: {
-                    Url_XtraLarge: "https://picsum.photos/800/800"
-                },
-                Summary: "<p>Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary </p>"
-            }
-        };
+                    Title: "title title title title title title title",
+                    Author: {
+                        Url: "http:google.com",
+                        Name: "Author Name",
+                        ImageResponse: {
+                            Url_Nano: "https://picsum.photos/600/600"
+                        },
+                        Position: "Author position"
+                    },
+                    Company: {
+                        Url: "http:google.com",
+                        Name: "Company name"
+                    },
+                    Image: {
+                        Url_XtraLarge: "https://picsum.photos/800/800"
+                    },
+                    Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
+                }
+            };
 
-        $.get('./analysis/highlightedanalysisitem_big.html', function (templates) {
-            var template = $(templates).filter('#highlightedanalysisitem_big').children().html();
-            $('#target').append(Mustache.render(template, dataObj));
-        });
+            $.get('./analysis/highlightedanalysisitem_big.html', function (templates) {
+                var template = $(templates).filter('#highlightedanalysisitem_big').children().html();
+                $('#target').append(Mustache.render(template, dataObj));
+            });
 
     </script>
 
     <!-- End Custom scripts to load highlightedPost mustaches-->
 </head>
 
-<body class="cbp-spmenu-push" onload="renderTemplates();">
+<body class="cbp-spmenu-push"">
     <div class="fxs_bgHeader">
         <div class="fxs_mediaHeader_bar fxs_hidden_s">
             <div class="fxs_mediaHeader_content">
