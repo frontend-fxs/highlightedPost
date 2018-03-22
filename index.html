@@ -78,7 +78,7 @@
         };
         $.each(templates, function (key, value) {
             $.get(value.file, function (templates) {
-                var template = $(templates).filter('#'+value.id).children().html();
+                var template = $(templates).filter('#'+value.id).html();
                 $('#target').append(Mustache.render(template, dataObj));
             });
         })
