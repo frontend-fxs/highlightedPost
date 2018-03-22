@@ -1,0 +1,131 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{50C33C3D-DCBC-45F6-BD55-A3684BBEB22A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>highlightedPost</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="analysis\highlightedanalysisitem_big.html" />
+    <Content Include="analysis\highlightedanalysisitem_extrasided.html" />
+    <Content Include="analysis\highlightedanalysisitem_large.html" />
+    <Content Include="analysis\highlightedanalysisitem_medium.html" />
+    <Content Include="analysis\highlightedanalysisitem_mediumclean.html" />
+    <Content Include="analysis\highlightedanalysisitem_quote.html" />
+    <Content Include="analysis\highlightedanalysisitem_seo.html" />
+    <Content Include="analysis\highlightedanalysisitem_small.html" />
+    <Content Include="analysis\highlightedanalysisitem_smallclean.html" />
+    <Content Include="cryptos\highlightedcryptositem_big.html" />
+    <Content Include="cryptos\highlightedcryptositem_extrasided.html" />
+    <Content Include="cryptos\highlightedcryptositem_large.html" />
+    <Content Include="cryptos\highlightedcryptositem_medium.html" />
+    <Content Include="cryptos\highlightedcryptositem_mediumclean.html" />
+    <Content Include="cryptos\highlightedcryptositem_quote.html" />
+    <Content Include="cryptos\highlightedcryptositem_seo.html" />
+    <Content Include="cryptos\highlightedcryptositem_small.html" />
+    <Content Include="cryptos\highlightedcryptositem_smallclean.html" />
+    <Content Include="education\highlightededucationitem_big.html" />
+    <Content Include="education\highlightededucationitem_extrasided.html" />
+    <Content Include="education\highlightededucationitem_large.html" />
+    <Content Include="education\highlightededucationitem_medium.html" />
+    <Content Include="education\highlightededucationitem_mediumclean.html" />
+    <Content Include="education\highlightededucationitem_quote.html" />
+    <Content Include="education\highlightededucationitem_seo.html" />
+    <Content Include="education\highlightededucationitem_small.html" />
+    <Content Include="education\highlightededucationitem_smallclean.html" />
+    <Content Include="index.html" />
+    <Content Include="news\highlightednewsitem_big.html" />
+    <Content Include="news\highlightednewsitem_extrasided.html" />
+    <Content Include="news\highlightednewsitem_large.html" />
+    <Content Include="news\highlightednewsitem_medium.html" />
+    <Content Include="news\highlightednewsitem_mediumclean.html" />
+    <Content Include="news\highlightednewsitem_quote.html" />
+    <Content Include="news\highlightednewsitem_seo.html" />
+    <Content Include="news\highlightednewsitem_small.html" />
+    <Content Include="news\highlightednewsitem_smallclean.html" />
+    <Content Include="video\highlightedvideoitem_big.html" />
+    <Content Include="video\highlightedvideoitem_extrasided.html" />
+    <Content Include="video\highlightedvideoitem_large.html" />
+    <Content Include="video\highlightedvideoitem_medium.html" />
+    <Content Include="video\highlightedvideoitem_mediumclean.html" />
+    <Content Include="video\highlightedvideoitem_quote.html" />
+    <Content Include="video\highlightedvideoitem_seo.html" />
+    <Content Include="video\highlightedvideoitem_small.html" />
+    <Content Include="video\highlightedvideoitem_smallclean.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\objects\3a\ad0bbaa40eaa4c02dfc990b1c565486c9f7623" />
+    <None Include=".git\objects\4b\825dc642cb6eb9a060e54bf8d69288fbee4904" />
+    <None Include=".git\objects\88\cfff02fbfd90830747c94114cb783f581a57f2" />
+    <None Include=".git\objects\9e\ffb533a7a64d5fa829b5bc89e95f5641064a8d" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\lfs\objects\logs\" />
+    <Folder Include=".git\lfs\tmp\objects\" />
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
