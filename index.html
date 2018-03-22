@@ -37,6 +37,8 @@
 
         var renderTemplate = function (template) {
 
+            var dataObj = {};
+
             $.get(template, function (template) {
                 var rendered = Mustache.render(template, dataObj);
                 $('#renderCanvas').append(rendered);
@@ -46,7 +48,6 @@
 
         var renderTemplates = function () {
 
-            var dataObj = {};
 
             renderTemplate('./analysis/highlightedanalysisitem_big.html');
 
