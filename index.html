@@ -79,7 +79,7 @@
         $.each(templates, function (key, value) {
             $.get(value.file, function (templates) {
                 var template = $(templates).filter('#'+value.id).html();
-                $('#target').append("<h1>"+value.id+"</h1><div class='fxs_col_50'>"+Mustache.render(template, dataObj)+"</div>");
+                $('#target').append("<div class='fxs_col_50'><h1>"+value.id+"</h1></div><div class='fxs_col_50'>"+Mustache.render(template, dataObj)+"</div>");
             });
         })
 
