@@ -64,7 +64,7 @@
 
             FXStreet.Util.loadHtmlTemplate(pTemplate).done(function (template) {
                 var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
-                $('#renderCanvas').append(rendered);
+                $('#renderCanvas').html(rendered);
             });
         }
 
