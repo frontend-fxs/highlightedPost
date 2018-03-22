@@ -62,10 +62,10 @@
                 }
             };
 
-            var template = $('#highlightedanalysisitem_big').html();
-            Mustache.parse(template);
-            var rendered = Mustache.render(template, { name: "Luke" });
-            $('#target').html(rendered);
+            $.get(pTemplate, function (template) {
+                var rendered = Mustache.render(template, dataObj);
+                $('#target').html(rendered);
+            });
         }
 
         var renderTemplates = function () {
