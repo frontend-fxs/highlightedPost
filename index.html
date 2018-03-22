@@ -64,7 +64,7 @@
 
             FXStreet.Util.loadHtmlTemplate(pTemplate).done(function (template) {
                 var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
-                $('#renderCanvas').html(rendered);
+                $('#highlightedanalysisitem_big').html(rendered);
             });
         }
 
@@ -126,7 +126,10 @@
                                     <div class="fxs_row">
                                         <div class="fxs_col fxs_col_100">
 
-                                            <div id="renderCanvas"></div>
+                                            <script id="highlightedanalysisitem_big" type="x-tmpl-mustache">
+                                            </script>
+
+
 
                                         </div>
                                     </div>
