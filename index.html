@@ -31,6 +31,10 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"> </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"> </script>
     <![endif]-->
+  
+</head>
+
+<body class="cbp-spmenu-push">
     <!--Custom scripts to load highlightedPost mustaches-->
 
     <script>
@@ -48,31 +52,31 @@
 
         ]
 
-            var dataObj = {
-                Value: {
-                    SEO: {
-                        FullUrl: "http:google.com"
+        var dataObj = {
+            Value: {
+                SEO: {
+                    FullUrl: "http:google.com"
+                },
+                Title: "title title title title title title title",
+                Author: {
+                    Url: "http:google.com",
+                    Name: "Author Name",
+                    ImageResponse: {
+                        Url_Nano: "https://picsum.photos/600/600"
                     },
-                    Title: "title title title title title title title",
-                    Author: {
-                        Url: "http:google.com",
-                        Name: "Author Name",
-                        ImageResponse: {
-                            Url_Nano: "https://picsum.photos/600/600"
-                        },
-                        Position: "Author position"
-                    },
-                    Company: {
-                        Url: "http:google.com",
-                        Name: "Company name"
-                    },
-                    Image: {
-                        Url_XtraLarge: "https://picsum.photos/800/800"
-                    },
-                    Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
-                }
-            };
-        $.each(templates, function (key,value) {
+                    Position: "Author position"
+                },
+                Company: {
+                    Url: "http:google.com",
+                    Name: "Company name"
+                },
+                Image: {
+                    Url_XtraLarge: "https://picsum.photos/800/800"
+                },
+                Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
+            }
+        };
+        $.each(templates, function (key, value) {
             FXStreet.Util.loadHtmlTemplate(value.file).done(function (template) {
                 var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
                 $('#target').append(rendered);
@@ -82,9 +86,6 @@
     </script>
 
     <!-- End Custom scripts to load highlightedPost mustaches-->
-</head>
-
-<body class="cbp-spmenu-push"">
     <div class="fxs_bgHeader">
         <div class="fxs_mediaHeader_bar fxs_hidden_s">
             <div class="fxs_mediaHeader_content">
