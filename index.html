@@ -62,10 +62,10 @@
                 }
             };
 
-            FXStreet.Util.loadHtmlTemplate(pTemplate).done(function (template) {
-                var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
-                $('#highlightedanalysisitem_big').html(rendered);
-            });
+            var template = $('#highlightedanalysisitem_big').html();
+            Mustache.parse(template);
+            var rendered = Mustache.render(template, { name: "Luke" });
+            $('#target').html(rendered);
         }
 
         var renderTemplates = function () {
@@ -126,8 +126,7 @@
                                     <div class="fxs_row">
                                         <div class="fxs_col fxs_col_100">
 
-                                            <script id="highlightedanalysisitem_big" type="x-tmpl-mustache">
-                                            </script>
+                                            <div id="target"></div>
 
 
 
