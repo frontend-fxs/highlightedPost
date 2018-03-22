@@ -31,8 +31,34 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"> </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"> </script>
     <![endif]-->
+    <!--Custom scripts to load highlightedPost mustaches-->
+
+    <script>
+
+        var renderTemplate = function (template) {
+
+            $.get(template, function (template) {
+                var rendered = Mustache.render(template, dataObj);
+                $('#renderCanvas').append(rendered);
+            });
+
+        }
+
+        var renderTemplates = function () {
+
+            var dataObj = {};
+
+            renderTemplate('./analysis/highlightedanalysisitem_big.html');
+
+
+        }
+
+    </script>
+
+    <!-- End Custom scripts to load highlightedPost mustaches-->
 </head>
-<body class="cbp-spmenu-push">
+
+<body class="cbp-spmenu-push" onload="renderTemplates();">
     <div class="fxs_bgHeader">
         <div class="fxs_mediaHeader_bar fxs_hidden_s">
             <div class="fxs_mediaHeader_content">
@@ -79,7 +105,7 @@
                                     <div class="fxs_row">
                                         <div class="fxs_col fxs_col_100">
 
-                                            mock here
+                                            <div id="renderCanvas"></div>
 
                                         </div>
                                     </div>
