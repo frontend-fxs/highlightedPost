@@ -35,44 +35,36 @@
 
     <script>
 
-        var renderTemplate = function (pTemplate) {
 
-            var dataObj = {
-                Value: {
-                    SEO: {
-                        FullUrl: "http:google.com"
+        var dataObj = {
+            Value: {
+                SEO: {
+                    FullUrl: "http:google.com"
+                },
+                Title: "title title title title title title title",
+                Author: {
+                    Url: "http:google.com",
+                    Name: "Author Name",
+                    ImageResponse: {
+                        Url_Nano: "https://picsum.photos/600/600"
                     },
-                    Title: "title title title title title title title",
-                    Author: {
-                        Url: "http:google.com",
-                        Name: "Author Name",
-                        ImageResponse: {
-                            Url_Nano: "https://picsum.photos/600/600"
-                        },
-                        Position: "Author position"
-                    },
-                    Company: {
-                        Url: "http:google.com",
-                        Name: "Company name"
-                    },
-                    Image: {
-                        Url_XtraLarge: "https://picsum.photos/800/800"
-                    },
-                    Summary: "<p>Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary </p>"
-                }
-            };
+                    Position: "Author position"
+                },
+                Company: {
+                    Url: "http:google.com",
+                    Name: "Company name"
+                },
+                Image: {
+                    Url_XtraLarge: "https://picsum.photos/800/800"
+                },
+                Summary: "<p>Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary </p>"
+            }
+        };
 
-            $.get(pTemplate, function (templates) {
-                var template = $(templates).filter('#highlightedanalysisitem_big').html();
-                $('#target').append(Mustache.render(template, dataObj));
-            });
-        }
-
-        var renderTemplates = function () {
-
-            renderTemplate('./analysis/highlightedanalysisitem_big.html');
-
-        }
+        $.get('./analysis/highlightedanalysisitem_big.html', function (templates) {
+            var template = $(templates).filter('#highlightedanalysisitem_big').children().html();
+            $('#target').append(Mustache.render(template, dataObj));
+        });
 
     </script>
 
