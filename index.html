@@ -62,9 +62,9 @@
                 }
             };
 
-            $.get(pTemplate, function (template) {
-                var rendered = Mustache.render(template, dataObj);
-                $('#target').html(rendered);
+            $.get(pTemplate, function (templates) {
+                var template = $(templates).filter('#highlightedanalysisitem_big').html();
+                $('#target').append(Mustache.render(template, dataObj));
             });
         }
 
