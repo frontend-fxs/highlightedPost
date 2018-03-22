@@ -77,9 +77,9 @@
             }
         };
         $.each(templates, function (key, value) {
-            FXStreet.Util.loadHtmlTemplate(value.file).done(function (template) {
-                var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
-                $('#target').append(rendered);
+            $.get(value.file, function (templates) {
+                var template = $(templates).filter('#'+value.id).children().html();
+                $('#target').append(Mustache.render(template, dataObj));
             });
         })
 
