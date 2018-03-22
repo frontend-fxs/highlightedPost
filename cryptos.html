@@ -31,67 +31,10 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"> </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"> </script>
     <![endif]-->
-  
+
 </head>
 
 <body class="cbp-spmenu-push">
-    <!--Custom scripts to load highlightedPost mustaches-->
-
-    <script>
-
-        var templates = [
-            { file: "./cryptos/highlightedcryptositem_big.html", id: "highlightedcryptositem_big" },
-            { file: "./cryptos/highlightedcryptositem_extrasided.html", id: "highlightedcryptositem_extrasided" },
-            { file: "./cryptos/highlightedcryptositem_large.html", id: "highlightedcryptositem_large" },
-            { file: "./cryptos/highlightedcryptositem_medium.html", id: "highlightedcryptositem_medium" },
-            { file: "./cryptos/highlightedcryptositem_mediumclean.html", id: "highlightedcryptositem_mediumclean" },
-            { file: "./cryptos/highlightedcryptositem_quote.html", id: "highlightedcryptositem_quote" },
-            { file: "./cryptos/highlightedcryptositem_seo.html", id: "highlightedcryptositem_seo" },
-            { file: "./cryptos/highlightedcryptositem_small.html", id: "highlightedcryptositem_small" },
-            { file: "./cryptos/highlightedcryptositem_smallclean.html", id: "highlightedcryptositem_smallclean" }
-
-        ]
-
-        var dataObj = {
-            Value: {
-                SEO: {
-                    FullUrl: "http:google.com"
-                },
-                Title: "title title title title title title title",
-                Author: {
-                    Url: "http:google.com",
-                    Name: "Author Name",
-                    ImageResponse: {
-                        Url_Nano: "https://picsum.photos/600/600"
-                    },
-                    Position: "Author position"
-                },
-                Company: {
-                    Url: "http:google.com",
-                    Name: "Company name"
-                },
-                Image: {
-                    Url_XtraLarge: "https://picsum.photos/800/800",
-                    Url_Large: "https://picsum.photos/800/800"
-                },
-                Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary",
-                PublicationDateDisplay: "22/03/2018",
-                Translations: {
-                    PremiumLabel: "Premium",
-                    ByLabel: "By:"
-                }
-            }
-        };
-        $.each(templates, function (key, value) {
-            $.get(value.file, function (templates) {
-                var template = $(templates).filter('#'+value.id).html();
-                $('#target').append("<div class='fxs_row'><div class='fxs_col_50'><h1>" + value.id + "</h1></div><div class='fxs_col_50'>" + Mustache.render(template, dataObj) +"</div></div>");
-            });
-        })
-
-    </script>
-
-    <!-- End Custom scripts to load highlightedPost mustaches-->
     <div class="fxs_bgHeader">
         <div class="fxs_mediaHeader_bar fxs_hidden_s">
             <div class="fxs_mediaHeader_content">
@@ -184,4 +127,65 @@
             <footer class="fxs_footer fxs_modal_footer"></footer>
         </div>
 </body>
+<!--Custom scripts to load highlightedPost mustaches-->
+
+<script>
+
+    var templates = [
+        { file: "./cryptos/highlightedcryptositem_big.html", id: "highlightedcryptositem_big" },
+        { file: "./cryptos/highlightedcryptositem_extrasided.html", id: "highlightedcryptositem_extrasided" },
+        { file: "./cryptos/highlightedcryptositem_large.html", id: "highlightedcryptositem_large" },
+        { file: "./cryptos/highlightedcryptositem_medium.html", id: "highlightedcryptositem_medium" },
+        { file: "./cryptos/highlightedcryptositem_mediumclean.html", id: "highlightedcryptositem_mediumclean" },
+        { file: "./cryptos/highlightedcryptositem_quote.html", id: "highlightedcryptositem_quote" },
+        { file: "./cryptos/highlightedcryptositem_seo.html", id: "highlightedcryptositem_seo" },
+        { file: "./cryptos/highlightedcryptositem_small.html", id: "highlightedcryptositem_small" },
+        { file: "./cryptos/highlightedcryptositem_smallclean.html", id: "highlightedcryptositem_smallclean" }
+
+    ]
+
+    var dataObj = {
+        Value: {
+            SEO: {
+                FullUrl: "http:google.com"
+            },
+            Title: "title title title title title title title",
+            Author: {
+                Url: "http:google.com",
+                Name: "Author Name",
+                ImageResponse: {
+                    Url_Nano: "https://picsum.photos/600/600"
+                },
+                Position: "Author position"
+            },
+            Company: {
+                Url: "http:google.com",
+                Name: "Company name"
+            },
+            Image: {
+                Url_XtraLarge: "https://picsum.photos/800/800",
+                Url_Large: "https://picsum.photos/800/800",
+                Url_Medium: "https://picsum.photos/800/800",
+                Url_Small: "https://picsum.photos/800/800",
+                Caption: "Image Caption"
+            },
+            Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary",
+            PublicationDateDisplay: "22/03/2018",
+            Translations: {
+                PremiumLabel: "Premium",
+                ByLabel: "By:"
+            }
+        }
+    };
+    $.each(templates, function (key, value) {
+        $.get(value.file, function (templates) {
+            var template = $(templates).filter('#' + value.id).html();
+            $('#target').append("<div class='fxs_row'><div class='fxs_col_50'><h1>" + value.id + "</h1></div><div class='fxs_col_50'>" + Mustache.render(template, dataObj) + "</div></div>");
+        });
+    })
+
+</script>
+
+<!-- End Custom scripts to load highlightedPost mustaches-->
+
 </html>
