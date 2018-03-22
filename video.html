@@ -35,7 +35,57 @@
 </head>
 
 <body class="cbp-spmenu-push">
-  
+    <!--Custom scripts to load highlightedPost mustaches-->
+
+    <script>
+
+        var templates = [
+            { file: "./video/highlightedvideoitem_big.html", id: "highlightedvideoitem_big" },
+            { file: "./video/highlightedvideoitem_extrasided.html", id: "highlightedvideoitem_extrasided" },
+            { file: "./video/highlightedvideoitem_large.html", id: "highlightedvideoitem_large" },
+            { file: "./video/highlightedvideoitem_medium.html", id: "highlightedvideoitem_medium" },
+            { file: "./video/highlightedvideoitem_mediumclean.html", id: "highlightedvideoitem_mediumclean" },
+            { file: "./video/highlightedvideoitem_quote.html", id: "highlightedvideoitem_quote" },
+            { file: "./video/highlightedvideoitem_seo.html", id: "highlightedvideoitem_seo" },
+            { file: "./video/highlightedvideoitem_small.html", id: "highlightedvideoitem_small" },
+            { file: "./video/highlightedvideoitem_smallclean.html", id: "highlightedvideoitem_smallclean" }
+
+        ]
+
+        var dataObj = {
+            Value: {
+                SEO: {
+                    FullUrl: "http:google.com"
+                },
+                Title: "title title title title title title title",
+                Author: {
+                    Url: "http:google.com",
+                    Name: "Author Name",
+                    ImageResponse: {
+                        Url_Nano: "https://picsum.photos/600/600"
+                    },
+                    Position: "Author position"
+                },
+                Company: {
+                    Url: "http:google.com",
+                    Name: "Company name"
+                },
+                Image: {
+                    Url_XtraLarge: "https://picsum.photos/800/800"
+                },
+                Summary: "Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary Summary"
+            }
+        };
+        $.each(templates, function (key, value) {
+            $.get(value.file, function (templates) {
+                var template = $(templates).filter('#'+value.id).html();
+                $('#target').append("<div class='fxs_row'><div class='fxs_col_50'><h1>" + value.id + "</h1></div><div class='fxs_col_50'>" + Mustache.render(template, dataObj) +"</div></div>");
+            });
+        })
+
+    </script>
+
+    <!-- End Custom scripts to load highlightedPost mustaches-->
     <div class="fxs_bgHeader">
         <div class="fxs_mediaHeader_bar fxs_hidden_s">
             <div class="fxs_mediaHeader_content">
@@ -113,6 +163,7 @@
                                     <div class="fxs_row">
                                         <div class="fxs_col fxs_col_100">
 
+                                            <div id="target"></div>
 
 
 

@@ -69,7 +69,12 @@
     <Content Include="education\highlightededucationitem_seo.html" />
     <Content Include="education\highlightededucationitem_small.html" />
     <Content Include="education\highlightededucationitem_smallclean.html" />
+    <Content Include="analysis.html" />
+    <Content Include="cryptos.html" />
+    <Content Include="education.html" />
+    <Content Include="news.html" />
     <Content Include="index.html" />
+    <Content Include="video.html" />
     <Content Include="news\highlightednewsitem_big.html" />
     <Content Include="news\highlightednewsitem_extrasided.html" />
     <Content Include="news\highlightednewsitem_large.html" />
