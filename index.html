@@ -35,7 +35,7 @@
 
     <script>
 
-        var renderTemplate = function (template) {
+        var renderTemplate = function (pTemplate) {
 
             var dataObj = {
                 Value: {
@@ -62,18 +62,15 @@
                 }
             };
 
-            $.get(template, function (template) {
-                var rendered = Mustache.render(template, dataObj);
+            FXStreet.Util.loadHtmlTemplate(pTemplate).done(function (template) {
+                var rendered = FXStreet.Util.renderByHtmlTemplate(template, dataObj);
                 $('#renderCanvas').append(rendered);
             });
-
         }
 
         var renderTemplates = function () {
 
-
             renderTemplate('./analysis/highlightedanalysisitem_big.html');
-
 
         }
 
